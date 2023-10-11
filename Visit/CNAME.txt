@@ -1,0 +1,1 @@
+www           CNAME     viplata_rf.com
