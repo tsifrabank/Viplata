@@ -8,15 +8,29 @@
 
     <style>
         body {
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+    .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px; /* Добавьте отступ сверху для .main */
+}
+@media screen and (max-width: 768px) {
+    .button {
+        font-size: 16px;
+    }
+    .h {
+        font-size: 30px;
+    }
+}
         .button {
             background-color: white;
             color: black;
@@ -34,12 +48,6 @@
             text-align: center;
             padding: 30px;
             margin: 50px;
-        }
-
-        .main {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
         }
 
         .section1 {
