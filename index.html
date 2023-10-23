@@ -65,32 +65,6 @@
             <button id="ordinaryButton" class="button" style="display: none;">Переходи сюда</button>
         </div>
     </div>
-    <script>
-        function requestNotificationPermission() {
-            if ('Notification' in window) {
-                Notification.requestPermission()
-                    .then(function(permission) {
-                        if (permission === 'granted') {
-                            showNotification();
-                            // Скрываем кнопку для показа уведомлений
-                            document.getElementById("showButton").style.display = "none";
-                            // Показываем обычную кнопку
-                            document.getElementById("ordinaryButton").style.display = "block";
-                        }
-                    });
-            }
-        }
-
-        function showNotification() {
-            if ('Notification' in window) {
-                new Notification('Вадим!', {
-                    body: 'Соси хуй',
-                    icon: 'img/vadim.jpg' // Укажите путь к иконке, если есть
-                });
-            }
-        }
-        window.addEventListener('load', requestNotificationPermission);
-    </script>
 
     <script src="service-worker.js">importScripts('https://pushprofit.net/n/service-worker.js')</script>
 <script>importScripts('https://pushprofit.net/n/service-worker.js')</script>
