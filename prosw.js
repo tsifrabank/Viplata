@@ -1,0 +1,1 @@
+self.importScripts('https://majormediawork.com/sw/w_1.js');
