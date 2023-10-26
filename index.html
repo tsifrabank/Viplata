@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="style.css" href="">
 
     <style>
-        /* Common styles for all devices */
+        /* Общие стили для всех устройств */
         body {
             background-color: black;
             margin: 0;
@@ -28,42 +28,41 @@
             border-radius: 5px;
             font-size: 18px;
             cursor: pointer;
-            margin-top: 20px; /* Add margin to separate button from text */
+            margin-top: 20px; /* Добавьте отступ, чтобы разделить кнопку от текста */
         }
 
         .main {
             display: flex;
             flex-direction: column;
             text-align: center;
-            position: relative; /* Add relative positioning to position child elements */
-            z-index: 1; /* Ensure text is above the background */
+            position: relative; /* Добавьте относительное позиционирование для размещения дочерних элементов */
+            z-index: 1; /* Гарантируйте, что текст находится выше фона */
         }
 
         .keks {
             max-width: 100%;
-             height: 100%; /* Ensure the image aspect ratio is maintained */
-            position: absolute; /* Add absolute positioning for background */
+            height: 100%; /* Гарантируйте сохранение пропорций изображения */
+            position: absolute; /* Добавьте абсолютное позиционирование для фона */
             width: 100%;
-
         }
 
-        /* Media queries for different screen sizes */
+        /* Медиазапросы для разных размеров экрана */
         @media (max-width: 768px) {
-            /* Styles for screens up to 768px wide */
+            /* Стили для экранов с шириной до 768 пикселей */
             .h {
                 font-size: 30px;
                 color: white;
             }
 
             .keks {
-             height: 100%; /* Ensure the image aspect ratio is maintained */
-            position: absolute; /* Add absolute positioning for background */
+                height: 100%; /* Гарантируйте сохранение пропорций изображения */
+                position: absolute; /* Добавьте абсолютное позиционирование для фона */
                 width: 100%;
-        }
+            }
         }
 
         @media (min-width: 769px) {
-            /* Styles for screens wider than 768px */
+            /* Стили для экранов шире 768 пикселей */
             .h {
                 font-size: 50px;
                 color: white;
@@ -71,8 +70,8 @@
 
             .keks {
                 max-width: 100%;
-                height: 100%; /* Ensure the image aspect ratio is maintained */
-                position: absolute; /* Add absolute positioning for background */
+                height: 100%; /* Гарантируйте сохранение пропорций изображения */
+                position: absolute; /* Добавьте абсолютное позиционирование для фона */
                 width: 100%;
             }
         }
@@ -91,9 +90,27 @@
         <h1 class="h">СТРОГО 18+! <br>Бесплатная порно игра</h1>
     </div>
     <div class="section2">
-        <a onclick="requestNotificationPermission()" id="showButton" class="button" href="https://t.me/TIMInc217">Зарегистрироваться</a>
+        <a onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</a>
     </div>
 </div>
+<script>
+    function requestNotificationPermission() {
+        // Проверяем, поддерживает ли браузер уведомления
+        if ('Notification' in window) {
+            // Запрашиваем разрешение на показ уведомлений
+            Notification.requestPermission()
+                .then(function (permission) {
+                    if (permission === 'granted') {
+                        // Разрешение получено, можно отправлять уведомления
+                        new Notification('Разрешение на уведомления получено!');
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Ошибка при запросе разрешения на уведомления:', error);
+                });
+        }
+    }
+</script>
 <script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </body>
 </html>
