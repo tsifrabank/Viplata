@@ -94,22 +94,33 @@
     </div>
 </div>
 <script>
-    function requestNotificationPermission() {
-        // Проверяем, поддерживает ли браузер уведомления
-        if ('Notification' in window) {
-            // Запрашиваем разрешение на показ уведомлений
-            Notification.requestPermission()
-                .then(function (permission) {
-                    if (permission === 'granted') {
-                        // Разрешение получено, можно отправлять уведомления
-                        new Notification('Разрешение на уведомления получено!');
-                    }
-                })
-                .catch(function (error) {
-                    console.error('Ошибка при запросе разрешения на уведомления:', error);
-                });
+    window.onSubscribeInit = function (manager) {
+        if (manager.getPermission() === 'default') {
+
+            manager.attachEvent('show', function () {
+                // Пользователю показали запрос на разрешение получения уведомлений
+            });
+
+            manager.attachEvent('error', function (error) {
+                // Произошла ошибка
+                console.log(error);
+            });
+
+            manager.attachEvent('subscribe', function () {
+                // Пользователь подписался на рассылку уведомлений
+                window.alert('Приступим к регистрации');
+            });
+
+            manager.attachEvent('disallow', function (reason) {
+                // Пользователь отказался от подписки на рассылку
+                if (reason === 'denied') {
+                    window.alert('Очень жаль, вы пропустите много интересного :(');
+                }
+            });
         }
-    }
+
+        manager.start();
+    };
 </script>
 <script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </body>
