@@ -22,63 +22,98 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/95408595" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
+<style>
+    /* Общие стили для всех устройств */
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("img/nft-game.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 
+    .section1 {
+        position: absolute;
+        color: white;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+    }
 
-    <style>
-        /* Общие стили для всех устройств */
-        body {
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    .h {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
-        button {
-            background-color: white;
-            color: black;
-            padding: 10px 20px;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            margin-top: 20px; /* Добавьте отступ, чтобы разделить кнопку от текста */
-        }
+    .button {
+    background: linear-gradient(to right, seagreen, dodgerblue);
+    color: black;
+        text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    width: 500px; /* Фиксированная ширина кнопки */
+    height: 40px; /* Фиксированная высота кнопки */
+        font-family: 'Alumni Sans', sans-serif;
+}
+    .grad {
+        z-index: 1;
+        display: flex;
+        backdrop-filter: blur(5px);
+        width: 40%;
+        height: 43%;
+        align-items: center;
+        border-radius: 15%;
+    }
+    h1 {
+        visibility: hidden;
+        font-family: 'Handjet', sans-serif;
+        font-size: 40px;
+    }
+</style>
 
-        .main {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            position: relative; /* Добавьте относительное позиционирование для размещения дочерних элементов */
-            z-index: 1; /* Гарантируйте, что текст находится выше фона */
-        }
-        .section2 {
-            cursor: pointer;
-        }
-        .h {
-            color: white;
-        }
-
-    </style>
     <script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </head>
 <body>
-<div class="main">
+<div class="grad">
     <div class="section1">
-        <h1 class="h">СТРОГО 18+! <br>Бесплатная порно игра</h1>
+        <h1 class="h" id="text" id="text"></h1>
+            <button onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</button>
     </div>
-    <div class="section2">
-        <button onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</button>
-
-    </div>
-
 </div>
 <script>
-    (function() {
+    const text = "СТРОГО 18+! Крипто-Игра с моментальным выводом!";
+const textElement = document.getElementById("text");
+let index = 0;
+
+function typeText() {
+    textElement.style.visibility = "visible"; // Показываем текст перед анимацией
+    if (index < text.length) {
+        textElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeText, 70); // Скорость печати (увеличьте или уменьшите значение)
+    }
+}
+
+typeText();
+</script>
+<script>
+(function() {
 var readyPushProfit = setInterval(function () {
 if(typeof window.ic4ca4 === "undefined") return;
 clearInterval(readyPushProfit);
