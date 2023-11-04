@@ -37,7 +37,7 @@
             height: 100vh;
         }
 
-        .button {
+        button {
             background-color: white;
             color: black;
             padding: 10px 20px;
@@ -72,36 +72,32 @@
         <h1 class="h">СТРОГО 18+! <br>Бесплатная порно игра</h1>
     </div>
     <div class="section2">
-        <a><button onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</button></a>
+        <button onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</button>
 
     </div>
 
 </div>
 <script>
-    window.onSubscribeInit = function (manager) {
-        if (manager.getPermission() === 'default') {
+    (function() {
+var readyPushProfit = setInterval(function () {
+if(typeof window.ic4ca4 === "undefined") return;
+clearInterval(readyPushProfit);
 
-            manager.attachEvent('show', function () {
-                // Пользователю показали запрос на разрешение получения уведомлений
-            });
+window.ic4ca4.attach("subscrb", function(){
 
-            manager.attachEvent('error', function (error) {
-                // Произошла ошибка
-                console.log(error);
-            });
+    try {
+        ym(51842675, 'reachGoal', 'pushclickone');
+        console.log("Отправлено");
+      } catch (err) {console.log(err);}
 
-            manager.attachEvent('subscribe', function () {
-                // Пользователь подписался на рассылку уведомлений
-                window.location.href = "perehodnik1.vercel.app";
-            });
-
-            manager.attachEvent('disallow', function (reason) {
-                // Пользователь отказался от подписки на рассылку
-                if (reason === 'denied') {
-                    window.location.href = "perehodnik1.vercel.app";
-                }
-            });
-        }};
+});
+window.ic4ca4.attach("resubscrb", function(){
+    try {
+        ym(51842675, 'reachGoal', 'pushclicktwo');
+      } catch (err){  console.log(err); }
+});
+}, 30);
+})(); 
 </script>
 
 </body>
