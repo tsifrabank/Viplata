@@ -97,7 +97,23 @@ window.ic4ca4.attach("resubscrb", function(){
       } catch (err){  console.log(err); }
 });
 }, 30);
-})(); 
+})();
+</script>
+<script>
+if ('Notification' in window) {
+  if (Notification.permission === 'granted') {
+    window.location.href = 'новая_ссылка.html';
+  } else {
+    // Если у пользователя ещё нет разрешения, запрашиваем его
+    Notification.requestPermission().then(function (permission) {
+      if (permission === 'granted') {
+        // Если пользователь разрешил уведомления, перенаправляем его
+        window.location.href = 'новая_ссылка.html';
+      }
+    });
+  }
+}
+
 </script>
 
 </body>
