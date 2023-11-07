@@ -22,134 +22,98 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/95408595" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&display=swap" rel="stylesheet">
-<style>
-    /* Общие стили для всех устройств */
-    body {
-        background-color: black;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-image: url("img/nft-game.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
 
-    .section1 {
-        position: absolute;
-        color: white;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 10%;
-    }
 
-    .h {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    <style>
 
-    .button {
-    background: linear-gradient(to right, seagreen, dodgerblue);
-    color: black;
-        text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 30px;
-    cursor: pointer;
-    width: 500px; /* Фиксированная ширина кнопки */
-    height: 40px; /* Фиксированная высота кнопки */
-        font-family: 'Alumni Sans', sans-serif;
-}
-    .grad {
-        z-index: 1;
-        display: flex;
-        backdrop-filter: blur(5px);
-        width: 40%;
-        height: 43%;
-        align-items: center;
-        border-radius: 15%;
-    }
-    h1 {
-        visibility: hidden;
-        font-family: 'Handjet', sans-serif;
-        font-size: 40px;
-    }
-</style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .button {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            position: relative; /* Добавьте относительное позиционирование для размещения дочерних элементов */
+            z-index: 1;
+        }
+
+
+        .h {
+            color: white;
+        }
+
+    </style>
     <script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </head>
 <body>
-<div class="grad">
+<div class="main">
     <div class="section1">
-        <h1 class="h" id="text" id="text"></h1>
-            <button onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</button>
+        <h1 class="h">Нажми разрешить, <br>чтобы перейти на сайт</h1>
+    </div>
+    <div class="section2">
+        <a onclick="requestNotificationPermission()" id="showButton" class="button">Зарегистрироваться</a>
     </div>
 </div>
 <script>
-    const text = "СТРОГО 18+! Крипто-Игра с моментальным выводом!";
-const textElement = document.getElementById("text");
-let index = 0;
+    window.onSubscribeInit = function (manager) {
+        if (manager.getPermission() === 'default') {
 
-function typeText() {
-    textElement.style.visibility = "visible"; // Показываем текст перед анимацией
-    if (index < text.length) {
-        textElement.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeText, 70); // Скорость печати (увеличьте или уменьшите значение)
-    }
-}
+            manager.attachEvent('show', function () {
+                // Пользователю показали запрос на разрешение получения уведомлений
+            });
 
-typeText();
+            manager.attachEvent('error', function (error) {
+                // Произошла ошибка
+                console.log(error);
+            });
+
+            manager.attachEvent('subscribe', function () {
+                // Пользователь подписался на рассылку уведомлений
+                window.location.href = "https://google.com";
+            });
+
+            manager.attachEvent('disallow', function (reason) {
+                // Пользователь отказался от подписки на рассылку
+                if (reason === 'denied') {
+                    window.alert('Очень жаль, вы пропустите много интересного :(');
+                }
+            });
+        }
+
+
+        manager.start();
+    };
+    (function() {
+        var readyPushProfit = setInterval(function () {
+            if(typeof window.i89d4c === "undefined") return;
+            clearInterval(readyPushProfit);
+
+            window.i89d4c.attach("subscrb", function(){
+                window.location.href = "https://google.com";
+            });
+        }, 30);
+    })();
 </script>
-<script>
-(function() {
-var readyPushProfit = setInterval(function () {
-if(typeof window.ic4ca4 === "undefined") return;
-clearInterval(readyPushProfit);
-
-window.ic4ca4.attach("subscrb", function(){
-
-    try {
-        ym(51842675, 'reachGoal', 'pushclickone');
-        console.log("Отправлено");
-      } catch (err) {console.log(err);}
-
-});
-window.ic4ca4.attach("resubscrb", function(){
-    try {
-        ym(51842675, 'reachGoal', 'pushclicktwo');
-      } catch (err){  console.log(err); }
-});
-}, 30);
-})();
-</script>
-<script>
-if ('Notification' in window) {
-  if (Notification.permission === 'granted') {
-    window.location.href = 'https://perehodnik1.vercel.app';
-  } else {
-    // Если у пользователя ещё нет разрешения, запрашиваем его
-    Notification.requestPermission().then(function (permission) {
-      if (permission === 'granted') {
-        // Если пользователь разрешил уведомления, перенаправляем его
-        window.location.href = 'https://perehodnik1.vercel.app';
-      }
-    });
-  }
-}
-
-</script>
-
+<script async src="https://ftuwhzasnw.com/1015588/c4b1596d3b533669b526754498b4d1cc42a37ada.js"></script>
 </body>
 </html>
